@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 movement = new Vector3(input.x, input.y, 0f);
 
-        transform.position += movement * speed * Time.deltaTime;
+       GetComponent<Rigidbody2D>().MovePosition(
+    GetComponent<Rigidbody2D>().position +
+    (Vector2)movement * speed * Time.deltaTime
+);
     }
 }
